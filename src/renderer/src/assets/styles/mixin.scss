@@ -1,0 +1,19 @@
+/*通过该函数设置主题颜色，后期方便统一管理*/
+@import './variable.scss';
+@import './themeify.scss';
+@mixin bgImage($url) {
+  background-image: url('~@/static/images/' + $url);
+  [data-theme='red'] & {
+    background-image: url('~@/static/images/' + $url);
+  }
+}
+
+/* 色值 */
+@mixin css($attribute, $color) {
+  #{$attribute}: $color;
+  [data-theme='red'] & {
+    @if ($color==$essential_color) {
+      #{$attribute}: $essential_color1;
+    }
+  }
+}

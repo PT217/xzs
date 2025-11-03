@@ -1,0 +1,61 @@
+@import 'variable.scss';
+@function swx-var($key) {
+  @if (map_has_key($theme-map, $key)) {
+    @return map-get($theme-map, $key);
+  } @else {
+    @return map-get($default-theme, $key);
+  }
+}
+@mixin swx-themeify($theme, $append-default-theme: true) {
+  @if (length(map-keys($theme)) >0 and $append-default-theme) {
+    $swx-themes: map-merge($swx-default-themes, $theme) !global;
+  } @else {
+    $swx-themes: $theme !global;
+  }
+  @each $theme-name, $theme-map in $swx-themes {
+    $theme-map: $theme-map !global;
+    $s-font-family: swx-var(font-family) !global;
+    $s-padding-size: swx-var(padding-size) !global;
+    $s-font-medium: swx-var(font-medium) !global;
+    $s-font-small: swx-var(font-small) !global;
+    $s-font-mini: swx-var(font-mini) !global;
+    $s-color-default: swx-var(color-default) !global;
+    $s-color-primary: swx-var(color-primary) !global;
+    $s-logo-bgcolor: swx-var(logo-bgcolor) !global;
+    $s-logo-color: swx-var(logo-color) !global;
+    $s-logo-color-hover: swx-var(logo-color-hover) !global;
+    $s-logo-divider-color: swx-var(logo-divider-color) !global;
+    $s-logo-divider-color-t: swx-var(logo-divider-color-t) !global;
+    $s-menu-bgcolor-active: swx-var(menu-bgcolor-active) !global;
+    $s-menu-color-active: swx-var(menu-color-active) !global;
+    $s-menu-border-active: swx-var(menu-border-active) !global;
+    $s-radius-size: swx-var(radius-size) !global;
+
+    @if (str_length($theme-name) >0) {
+      .swx-theme-#{$theme-name} {
+        font-family: $s-font-family;
+        @content;
+      }
+    } @else {
+      html {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin swx-theme-wrap($theme) {
+  @include swx-themeify($theme, true) {
+    @content;
+  }
+}
+
+@mixin swx-use-theme($theme: ()) {
+  @include swx-themeify($theme, false);
+}
+
+@mixin themeify {
+  @include swx-theme-wrap($swx-default-themes) {
+    @content;
+  }
+}

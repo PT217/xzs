@@ -1,0 +1,84 @@
+$default-theme: (
+  font-family: (
+    'Microsoft Yahei',
+    sans-serif,
+  ),
+  padding-size: 16px,
+  font-medium: 18px,
+  font-small: 16px,
+  font-mini: 14px,
+  color-default: #334d6d,
+  color-primary: #3f86e8,
+  logo-bgcolor: #1277c7,
+  logo-color: #5db7ff,
+  logo-color-hover: #acdaff,
+  logo-divider-color: #2283ca,
+  logo-divider-color-t: #106cb5,
+  menu-bgcolor-active: #dbebff,
+  menu-color-active: #007eff,
+  menu-border-active: #4196ff,
+  radius-size: 5px,
+);
+$green-themes: (
+  logo-bgcolor: #018776,
+  logo-color: #9ce2d9,
+  logo-divider-color: #22ca76,
+  menu-bgcolor-active: #c5eee9,
+  menu-color-active: #038372,
+  menu-border-active: #52d3c4,
+);
+$swx-default-themes: (
+  'default': $default-theme,
+  'green': $green-themes,
+);
+
+// 主色
+$essential_color: #165ac6; /* 页头、鼠标悬停文字色、标签页文字（选中）、一级菜单文字悬停色 */
+$essential_color1: green; /* 页头、鼠标悬停文字色、标签页文字（选中） */
+$title_line_color: #4a76ab; /* 标签页边框（选中）、控件（选中）、小标题前点缀、链接、功能弹窗标题栏、一级菜单文字色 */
+$btn_color: #1b9cff; /* 按钮、部分icon */
+// 辅助色
+$list_bg_color_active: #82a6df; /* 列表选中、部分icon */
+$assist_color: #c4dcf4; /* 部分背景、按钮 */
+$bg_color_active: #78a1cb; /* 选择器（选中）、选项卡（选中）、滚动条 */
+$list_bg_color: #d7e5f9; /* 标题栏背景、列表表头、选项卡（未选中）、目录树（选中） */
+$bg_color: #ecf1fa; /* 大背景、目录树（悬停）、列表悬停色、功能弹窗按钮底色 */
+$zebra_color: #f3f6f8; /* 列表间隔色（斑马纹） */
+$default_border_color: #4a76ab; /* 边框线按钮填充 */
+$icon_color: #7f92bf; /* icon */
+$border_color: #b6cae4; /* 边框线 */
+$readonly_color: #ebeff3; /* 只读颜色 */
+$form_bg_color: #dcdcdc; /* wps、form背景色 */
+// 字体色
+$title_font_color: #2d405e; /* 二级标题、三级标题、醒目文字 */
+$font_color: #4f5e7b; /* 内容 */
+$assist_font_color: #879bba; /* 辅助、说明 */
+$input_font_color: #666666; /* 内容编辑色、选择器文字、标签页未选中文字、线框按钮文字 */
+$placeholder_font_color: #bac9df; /* 输入框提示文字 */
+$disabled_font_color: #b8bdc3; /* 不可交互色 */
+// 提示色
+$caution_color: #e6a23c; /* 警示 */
+$success_color: #1dc5b3; /* 正确 */
+$error_color: #f86359; /* 错误 */
+$correction_color: #ffff00; /* 纠错 */
+// 字体大小
+$fontsize_mini: 12px; /* 标签 */
+$fontsize_small: 14px; /* 注释、备注性信息 */
+$fontsize_default: 14px; /* 默认字号、标题、导航、弹窗标题 */
+$fontsize_medium: 18px; /* 个别强调 */
+$fontsize_big: 24px; /* 缺省页提示、个别强调 */
+// 模块内边距
+$padding: 10px; /* 模块内边距 */
+$dialog_padding: 15px; /* 弹出框内边距 */
+
+// 换肤功能demo
+$themes: (
+  light: (
+    //字体
+    font_color1: #414141,
+  ),
+  dark: (
+    //字体
+    font_color1: #a7a7a7,
+  ),
+);
